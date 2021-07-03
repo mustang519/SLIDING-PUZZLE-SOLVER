@@ -50,7 +50,6 @@ void IDA_star(Node* src){
     Node* root = newNode(src->board , src->x_0 , src->y_0 , src->x_0 , src->y_0 , src->level , src->par);
 
     root->cost = heuristic_manhattan(root->board);
-    cout << root->cost << "\n";
 
     int threshold = heuristic_manhattan(src->board);
 
