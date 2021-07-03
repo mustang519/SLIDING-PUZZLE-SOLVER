@@ -1,5 +1,4 @@
 
-
 int merge(int a[n*n-1] , int start,int mid,int end){
     int temp[n*n-1];
     int pos = start;
@@ -28,7 +27,7 @@ int merge(int a[n*n-1] , int start,int mid,int end){
         a[i] = temp[i];
     }
 
-    return invCount;
+    return invCount;    
 
 }
 
@@ -50,6 +49,7 @@ int mergesort(int start, int end , int a[n*n-1]){
 
 }
 
+//Finds row position of blank cell from bottom
 int find_blankRow_pos(){
     for(int i=0;i<n;i++){
         for(int j=0;j<n;j++){
@@ -62,6 +62,7 @@ int find_blankRow_pos(){
     return -1;
 }
 
+// Checks if the current instance of sliding puzzle is solvable or not. 
 bool isSolvable(){
     int a[n*n];
     int p=0;
@@ -76,20 +77,21 @@ bool isSolvable(){
     }
     int inv_cnt=0;
     int x = n*n-1;
-    int cnt = mergesort(0,x-1,a);
+    int inv_cnt = mergesort(0,x-1,a);     // Returns the inversion count of the array in O(n^2log(n)) time complexity
     int pos = find_blankRow_pos();
 
+    // For a grid of odd width , number of inversions should be even for the current instance of puzzle to be solvable
     if(n&1){
-        if(cnt&1){
+        if(inv_cnt&1){
             return 0;
         }
         else{
                return 1;
         }
     }
-
+// For a grid of even width, the following is invariant: (#inversions even) == (blank on odd row from bottom). 
     else{
-        int flag =pos+cnt;
+        int flag =pos+inv_cnt;
         if(flag&1){
                return 1;
         }
