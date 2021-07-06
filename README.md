@@ -85,12 +85,8 @@ Two heuristics are also maintained here : Manhattan Distance Heuristics and Hamm
 **Hamming Distance Heuristics** : Count the number of misplaced tiles between current state and goal state. It never overestimates the steps required to solve.
 
 **Manhattan Distance Heuristics** : Sum of manhattan distances of all the numbered tiles between the current and goal state. This is a better heuritic function that reaches goal state quickly.
-![Screenshot (204)](https://user-images.githubusercontent.com/75406889/124605333-6c12f680-de89-11eb-8105-c9a813c7e44a.png)
 
 ## CheckSolvable.cpp
-This file plots the real time stocks price against their current time instant. This helps to visulaize how the stock price varies for a company , that gives better insight to the trader who wants to invest in that company.
-![Screenshot (205)](https://user-images.githubusercontent.com/75406889/124605334-6c12f680-de89-11eb-8ce6-3c6c110ca589.png)
-
 
 <!-- CONTRIBUTING 
 ## Contributing
