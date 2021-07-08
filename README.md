@@ -63,6 +63,12 @@
     <li>
       <a href="#idastarcpp">IDA_Star.cpp</a>
     </li>
+    <li>
+      <a href="#visualizationofoutput">Visualization of Output</a>
+    </li>
+    <li>
+      <a href="#conclusion">Conclusion</a>
+    </li>
     <!--
     <li><a href="#acknowledgements">Acknowledgements</a></li>
     -->
@@ -110,7 +116,27 @@ Two types of heuristics are used here , Hamming distance and Manhattan Distance 
 
 ## IDA_Star.cpp
 
-This file solves the puzzle using Iterative Deepening A Star algorithm , which is a variant of Iterative Deepening Depth First Search and A Star. This puzzle solver is the memory efficient variant of the above algorithms , because it does not maintain a list of visited states , and may end up visiting the same states again. Because heuristics is used to calculate approximate cost of each state , it doesn't search for goal state in subtrees that do not contain a solution state. Also in the worst case the nodes with smaller depth (i.e. the nodes without more branching & depth) are visisted more than once.
+This file solves the puzzle using Iterative Deepening A Star algorithm , which is a variant of Iterative Deepening Depth First Search and A Star. This puzzle solver is the memory efficient variant of the above algorithms , because it does not maintain a list of visited states (like memoization of dynamic programming used by A Star) , and may end up visiting the same states again. Because heuristics is used to calculate approximate cost of each state , it doesn't search for goal state in subtrees that do not contain a solution state. Also in the worst case the nodes with smaller depth (i.e. the nodes without more branching & depth) are visisted more than once.
+
+## Visualization of Output
+
+Initial State<br/>
+[3 8 5]<br/>
+[0 7 1]<br/>
+[2 6 4]<br/>
+
+![Screenshot (198)](https://user-images.githubusercontent.com/62290422/124349490-e1be5e80-dc0c-11eb-8cef-4fc6e1d4b062.png)
+
+![Screenshot (200)](https://user-images.githubusercontent.com/62290422/124349497-e84cd600-dc0c-11eb-97e3-b2f7197002a0.png)
+
+## Conclusion
+
+**BFS :** took **23** steps . Time taken to execute : **4.646 s**
+
+**A Star :** took **23** steps . Time taken to execute : **0.07 s**
+
+**IDA Star :** took **25** steps . Time taken to execute : **1.598 s**
+
 
 <!-- CONTRIBUTING 
 ## Contributing
