@@ -64,7 +64,7 @@
       <a href="#idastarcpp">IDA_Star.cpp</a>
     </li>
     <li>
-      <a href="#visualizationofoutput">Visualization of Output</a>
+      <a href="#visualization-of-output">Visualization of Output</a>
     </li>
     <li>
       <a href="#conclusion">Conclusion</a>
