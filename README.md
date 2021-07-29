@@ -111,7 +111,7 @@ This file solves the puzzle using Breadth First Search algorithm. This follows b
 
 ## A_Star.cpp
 
-Here, the puzzle is solved using A_star algorithm , which turns out to be the fastest solver. Here each move is always made to the state with least cost. This approximate cost F(x) is calculated as : **F(x) = g(x) + h(x)** where , g(x) gives the number of misplaced tiles between current and solved state , while h(x) is a heuristics function. 
+Here, the puzzle is solved using A_star algorithm , which turns out to be the fastest solver. Here each move is always made to the state with least cost. This approximate cost F(x) is calculated as : **F(x) = g(x) + h(x)** where , g(x) gives the number of moves from root to current state , while h(x) is a heuristics function. 
 Two types of heuristics are used here , Hamming distance and Manhattan Distance Heuristics , which intelligently underestimates the moves required to reach goal state. In this way it avoids searching sub trees that do not contain an answer , and only explore sub trees with the least cost.
 
 ## IDA_Star.cpp
